@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cuatrimotos</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <link rel="stylesheet" type="text/css" href="Css/Skin.css">
+        <script src="Js/Funciones.js" type="text/javascript" lenguage="javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>App Quadbike</h1>
+    <div id="all" class="all">
+    <div class="seccion" id="seccion">
+        <h2>Categoria</h2>
+        <div class="categoria" id="categoria">
+            
+        </div>
+        <br>
+        <button onclick="verCategorias()">Ver Datos</button>
+        <br>
+        <br>
+        <input type="text" id="nameCateg" class="nameCateg" placeholder="Nombre">
+        <input type="text" id="descriptionCateg" class="descriptionCateg" placeholder="Descripción">
+        <button onclick="guardarCategorias()">Ingresar</button>
+        <br>
+    </div>
+    <div class="seccion" id="seccion"> 
+        <h2>Cuatrimotos</h2>
+        <div class="cuatrimoto" id="cuatrimoto">
+            
+        </div>
+            <br>
+        <button onclick="verMotos()">Ver Datos</button>
+            <br>
+            <br>
+            <input type="text" id="brandMot" class="brandMot" placeholder="Marca" maxlength="45">
+            <input type="number" id="yearMot" class="yearMot" placeholder="Año" minlength="4">
+            <input type="text" id="nameMot" class="nameMot" placeholder="Nombre" maxlength="45">
+            <input type="text" id="descriptionMot" class="descriptionMot" placeholder="Descripción" maxlength="250">
+            <select id="selectCat" class="selectCat"></select>
+            <script type="text/javascript">
+                window.onload = autoInicioCategoria();
+            </script>
+        <button onclick="guardarMotos()">Ingresar</button>
+        <br>
+    </div>
+    <div id="seccion" class="seccion">
+        <h2>Clientes</h2>
+        <div class="cliente" id="cliente">
+
+        </div>
+        <br>
+        <button onclick="verClientes()">Ver Datos</button>
+            <br>
+            <br>
+            <input type="text" id="nameC" class="nameC" placeholder="Nombre">
+            <input type="email" id="mailC" class="mailC" placeholder="Email">
+            <input type="password" id="passC" class="passC" placeholder="Password">
+            <input type="number" id="ageC" class="ageC" placeholder="Edad">
+        <button onclick="guardarCliente()">Ingresar</button>
+        <br>
+    </div>
+<div class="seccion" id="seccion">
+        <h2>Mensajes</h2>
+    <div class="mensajes" id="mensajes">
+            
+        </div>
+            <br>
+        <button onclick="verMensajes()">Ver Datos</button>
+            <br>
+            <br>
+        <input type="text" id="mensaje" class="mensaje" placeholder="Mensaje">
+        <button onclick="guardarMensaje()">Ingresar</button>
+        <select id="selectClient" class="selectClient"></select>
+        <script type="text/javascript">
+            window.onload=autoInicioCliente();
+        </script>
+        <select id="selectQuadbike" class="selectQuadbike"></select>
+        <script type="text/javascript">
+            window.onload=autoInicioQuadbike();
+        </script>
+        <br>
+    </div>
+    <div id="seccion" class="seccion">
+        <h2>Reservaciones</h2>
+        <div class="reservacion" id="reservacion">
+            
+        </div>
+        <br>
+        <button onclick="verReservacion()">Ver Datos</button>
+            <br>
+            <br>
+            <input type="date" id="fInicio" class="fInicio" placeholder="Fecha inicio">
+            <input type="date" id="fFin" class="fFin" placeholder="Fin de reserva">
+            <input type="text" id="status" class="status" placeholder="Estado completed o cancelled">
+            <select id="select-client" class="select-client"></select>
+            <script type="text/javascript">
+                window.onload=autoInicioClientR();
+            </script>
+            <select id="select-quadbike" class="select-quadbike"></select>
+            <script type="text/javascript">
+                window.onload=autoInicioQuadbikeR();
+            </script>
+        <button onclick="guardarReserva()">Ingresar</button>
+        <br>
+    </div>
+    <div class="seccion" id="seccion">
+        <h2>Reportes</h2>
+        <div id="reportes" class="reportes">
+            <h3>Reporte de Estatus</h3>
+            <div id="resultadoStatus" class="resultadoStatus"></div>
+            <br>
+            <button onclick="traerReporteStatus()"> Generar Reporte Status Reservas </button>
+            <br>
+            <h3>Reporte de estatus entre fechas</h3>
+            <div id="resultadoDate"></div>
+            <br>
+            <input type="date" id="RstarDate">
+            <input type="date" id="RdevolutionDate">
+            <br>
+            <br>
+            <button onclick="traerReporteDate()"> Generar Reporte por fecha </button>
+            <h3>Top Clientes</h3>
+            <div id="resultadoClientes" class="resultadoClientes"></div>
+            <button onclick="traerReporteClientes()"> Generar Reporte top clientes</button>
+        <br>
+    </div>
+    <br>
+</div>
+    </body>
+</html>
